@@ -38,3 +38,7 @@ The userscript and all plugin userscripts are provided under the [AGPL 3.0 licen
 v0.2 - refractored code, added custom button and separator inserters, added update URLs
 
 v0.1 - initial release.
+
+## Donations
+
+Donations are welcome: 1**mprep**xqZeK7LcRYEz84DVJKCvF8CQ8gu
