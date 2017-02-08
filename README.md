@@ -15,7 +15,7 @@ Userscript, which adds the ability to create custom buttons for the post and PM 
 3. Install any plugin userscripts (official plugins can be found [here](/plugins); click on the plugin and then click the button 'Raw' to get the file).
 4. Make sure the main userscript is executed _**before**_ any plugins are (your userscript manager should allow you to control the execution order of the plugins).
 5. *(Optional) Move around the plugin execution order in order to choose which plugins should be loaded first.*
-6. *(Optional) Create your own plugins by using the function refernce located in the main userscript*
+6. *(Optional) Create your own plugins by using the function reference located in the main userscript*
 
 
 ## Examples (for plugins)
