@@ -48,9 +48,9 @@ function addInserter(imageUrl, bbcode, title, id='icon')
  */
 function addSurrounder(imageUrl, bbStart, bbEnd, title, id='icon') 
 {
-    $('.custom-iconizer:last').after('<a class="custom-iconizer" href="javascript:void(0);" onclick="surroundText(' + 
-    bbStart + ',' + 
-    bbEnd + ', document.forms.postmodify.message); return false;"><img onmouseover="bbc_highlight(this, true);" onmouseout="if (window.bbc_highlight) bbc_highlight(this, false);" src="' + 
+    $('.custom-iconizer:last').after('<a class="custom-iconizer" href="javascript:void(0);" onclick="surroundText(\'' + 
+    bbStart + '\',\'' + 
+    bbEnd + '\', document.forms.postmodify.message); return false;"><img onmouseover="bbc_highlight(this, true);" onmouseout="if (window.bbc_highlight) bbc_highlight(this, false);" src="' + 
     imageUrl + '" alt="' + 
     title + '" title="' + 
     title + '" style="background-image: url(https://bitcointalk.org/Themes/custom1/images/bbc/bbc_bg.gif); margin: 1px 2px 1px 1px;" align="bottom" height="22" width="23"></a>');
