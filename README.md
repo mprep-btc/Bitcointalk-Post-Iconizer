@@ -2,7 +2,7 @@
 
 ![Screenshot 1](/screenshots/screenshot1.PNG?raw=true "")
 ---
-Userscript, which adds the ability to create custom buttons for the post and PM creation pages on Bitcointalk (and possibly other SMF 1.X forums).
+A simple userscript, which adds the ability to create custom buttons for the post and PM creation pages on Bitcointalk (and possibly other SMF 1.X forums).
 
 
 ## Installation instructions
