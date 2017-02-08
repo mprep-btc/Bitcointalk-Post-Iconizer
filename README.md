@@ -30,10 +30,6 @@ addInserter("someIcon.jpg","[b]Example things[/b]","Thing name");
 addSurrounder("someIcon.jpg","[b][u]start"," and the end[/u][/b]","Thing name");
 ```
 
-## Bitcointalk.org topic
-
-https://bitcointalk.org/index.php?topic=1782017.0
-
 ## License
 The userscript and all plugin userscripts are provided under the [AGPL 3.0 license](https://github.com/mprep-btc/Bitcointalk-Post-Iconizer/blob/master/LICENSE).
 
@@ -46,3 +42,7 @@ v0.1 - initial release.
 ## Donations
 
 Donations are welcome: 1**mprep**xqZeK7LcRYEz84DVJKCvF8CQ8gu
+
+## Bitcointalk.org topic
+
+https://bitcointalk.org/index.php?topic=1782017.0
