@@ -6,7 +6,7 @@
 // @include     https://bitcointalk.org/index.php?action=post;*
 // @include     https://bitcointalk.org/index.php?action=pm;sa=send*
 // @require     https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js
-// @version     0.22a
+// @version     0.23
 // @downloadURL https://raw.githubusercontent.com/mprep-btc/Bitcointalk-Post-Iconizer/master/customIcons.js
 // @grant       none
 // ==/UserScript==
