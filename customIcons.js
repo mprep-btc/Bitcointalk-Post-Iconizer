@@ -1,11 +1,12 @@
 // ==UserScript==
 // @name        Bitcointalk Post Iconizer
 // @namespace   mprep
+// @author      mprep
 // @description Add custom buttons to Bitcointalk's post editing page for inserting BB code
 // @include     https://bitcointalk.org/index.php?action=post;*
 // @include     https://bitcointalk.org/index.php?action=pm;sa=send*
 // @require     https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js
-// @version     0.22
+// @version     0.22a
 // @downloadURL https://raw.githubusercontent.com/mprep-btc/Bitcointalk-Post-Iconizer/master/customIcons.js
 // @grant       none
 // ==/UserScript==
