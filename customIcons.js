@@ -67,24 +67,6 @@ function addSeparator(id='icon')
     $('.custom-iconizer:last').after('<img src="https://bitcointalk.org/Themes/custom1/images/bbc/divider.gif" alt="|" style="margin: 0 3px 0 3px;" class="custom-iconizer">');
 }
 
-/* Adds button with a custom onclick function
- *
- * Parameters:
- *  [imageUrl] - URL / data URI for the button's icon;
- *  [customFunc] - the function you want to call when the buttons clicked;
- *  [title] - the text you want displayed when the user hovers over the buttons
- *  [id] (optional) - button's ID for any custom extensions.
- */
-function addUtilitizer(imageUrl, customFunc, title, id='icon') 
-{
-    $('.custom-iconizer:last').after('<a class="custom-iconizer" id='+
-    id+' href="javascript:void(0);" onclick="' + 
-    customFunc + '"><img onmouseover="bbc_highlight(this, true);" onmouseout="if (window.bbc_highlight) bbc_highlight(this, false);" src="' + 
-    imageUrl + '" alt="' + 
-    title + '" title="' + 
-    title + '" style="background-image: url(https://bitcointalk.org/Themes/custom1/images/bbc/bbc_bg.gif); margin: 1px 2px 1px 1px;" align="bottom" height="22" width="23"></a>');
-}
-
 /************************************** ^^ API FUNCTIONS ^^ *****************************************/
 
 
