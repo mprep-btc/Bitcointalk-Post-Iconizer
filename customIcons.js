@@ -6,7 +6,7 @@
 // @include     https://bitcointalk.org/index.php?action=post;*
 // @include     https://bitcointalk.org/index.php?action=pm;sa=send*
 // @require     https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js
-// @version     0.23
+// @version     0.24
 // @downloadURL https://raw.githubusercontent.com/mprep-btc/Bitcointalk-Post-Iconizer/master/customIcons.js
 // @grant       none
 // ==/UserScript==
@@ -72,5 +72,5 @@ function addSeparator(id='icon')
 
 //Inject API scripts into page
 var script = document.createElement('script');
-script.appendChild(document.createTextNode(addInserter + addSurrounder + addSeparator + addUtilitizer));
+script.appendChild(document.createTextNode(addInserter + addSurrounder + addSeparator));
 (document.body || document.head || document.documentElement).appendChild(script);
