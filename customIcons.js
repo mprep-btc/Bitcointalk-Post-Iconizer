@@ -6,7 +6,7 @@
 // @include     https://bitcointalk.org/index.php?action=post;*
 // @include     https://bitcointalk.org/index.php?action=pm;sa=send*
 // @require     https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js
-// @version     0.24
+// @version     0.25
 // @downloadURL https://raw.githubusercontent.com/mprep-btc/Bitcointalk-Post-Iconizer/master/customIcons.js
 // @grant       none
 // ==/UserScript==
@@ -16,6 +16,17 @@ if ($('.custom-iconizer').length == 0)
 {
     $('img[src="https://bitcointalk.org/Themes/custom1/images/bbc/list.gif"]').parent().
         after('<img src="https://bitcointalk.org/Themes/custom1/images/bbc/divider.gif" alt="|" style="margin: 0 3px 0 3px;" class="custom-iconizer">');
+}
+
+function addCustomButton(imageUrl, title, id) {
+    var newButton = $('.custom-iconizer:last').after('<a class="custom-iconizer" href="javascript:void(0);"></a>');
+    var newButtonImage = $('<img onmouseover="bbc_highlight(this, true);" onmouseout="if (window.bbc_highlight) bbc_highlight(this, false);" style="background-image: url(https://bitcointalk.org/Themes/custom1/images/bbc/bbc_bg.gif); margin: 1px 2px 1px 1px;" align="bottom" height="22" width="23"/>').appendTo(newButton);
+    newButtonImage.attr("src",imageUrl).attr("alt",title).attr("title",title);
+    if (id != '')
+    {
+        newButtonImage.attr("id",id);
+    }
+    return newButton;
 }
 
 /************************************** ⌄⌄ API FUNCTIONS ⌄⌄ *****************************************/
@@ -29,13 +40,9 @@ if ($('.custom-iconizer').length == 0)
  *  [title] - the text you want displayed when the user hovers over the buttons
  *  [id] (optional) - button's ID for any custom extensions.
  */
-function addInserter(imageUrl, bbcode, title, id='icon') 
+function addInserter(imageUrl, bbcode, title, id='') 
 {
-    $('.custom-iconizer:last').after('<a class="custom-iconizer" href="javascript:void(0);" onclick="replaceText(\'' +
-        bbcode + '\', document.forms.postmodify.message); return false;"><img onmouseover="bbc_highlight(this, true);" onmouseout="if (window.bbc_highlight) bbc_highlight(this, false);" src="' +
-        imageUrl + '" alt="' +
-        title + '" title="' +
-        title + '" style="background-image: url(https://bitcointalk.org/Themes/custom1/images/bbc/bbc_bg.gif); margin: 1px 2px 1px 1px;" align="bottom" height="22" width="23"></a>');
+    addCustomButton(imageUrl,title,id).click(function(){replaceText(bbcode, document.forms.postmodify.message); return false;});
 }
 
 /* Adds surrounder (e.g. [b]some selected text here[/b]) button
@@ -47,14 +54,9 @@ function addInserter(imageUrl, bbcode, title, id='icon')
  *  [title] - the text you want displayed when the user hovers over the buttons
  *  [id] (optional) - button's ID for any custom extensions.
  */
-function addSurrounder(imageUrl, bbStart, bbEnd, title, id='icon') 
+function addSurrounder(imageUrl, bbStart, bbEnd, title, id='') 
 {
-    $('.custom-iconizer:last').after('<a class="custom-iconizer" href="javascript:void(0);" onclick="surroundText(\'' + 
-    bbStart + '\',\'' + 
-    bbEnd + '\', document.forms.postmodify.message); return false;"><img onmouseover="bbc_highlight(this, true);" onmouseout="if (window.bbc_highlight) bbc_highlight(this, false);" src="' + 
-    imageUrl + '" alt="' + 
-    title + '" title="' + 
-    title + '" style="background-image: url(https://bitcointalk.org/Themes/custom1/images/bbc/bbc_bg.gif); margin: 1px 2px 1px 1px;" align="bottom" height="22" width="23"></a>');
+    addCustomButton(imageUrl,title,id).click(function(){surroundText( bbStart, bbEnd, document.forms.postmodify.message); return false;});
 }
 
 /* Adds separator
@@ -62,9 +64,13 @@ function addSurrounder(imageUrl, bbStart, bbEnd, title, id='icon')
  * Parameters:
  *  [id] (optional) - separator's ID for any custom extensions.
  */
-function addSeparator(id='icon') 
+function addSeparator(id='') 
 {
-    $('.custom-iconizer:last').after('<img src="https://bitcointalk.org/Themes/custom1/images/bbc/divider.gif" alt="|" style="margin: 0 3px 0 3px;" class="custom-iconizer">');
+    var separator = $('.custom-iconizer:last').after('<img src="https://bitcointalk.org/Themes/custom1/images/bbc/divider.gif" alt="|" style="margin: 0 3px 0 3px;" class="custom-iconizer">').attr("id",id);
+    if (id != '')
+    {
+        newSurroundersImage.attr("id",id);
+    }
 }
 
 /************************************** ^^ API FUNCTIONS ^^ *****************************************/
@@ -72,5 +78,5 @@ function addSeparator(id='icon')
 
 //Inject API scripts into page
 var script = document.createElement('script');
-script.appendChild(document.createTextNode(addInserter + addSurrounder + addSeparator));
+script.appendChild(document.createTextNode(addCustomButton + addInserter + addSurrounder + addSeparator));
 (document.body || document.head || document.documentElement).appendChild(script);
