@@ -66,7 +66,7 @@ function addSurrounder(imageUrl, bbStart, bbEnd, title, id='')
  */
 function addSeparator(id='') 
 {
-    var separator = $('.custom-iconizer:last').after('<img src="https://bitcointalk.org/Themes/custom1/images/bbc/divider.gif" alt="|" style="margin: 0 3px 0 3px;" class="custom-iconizer">').attr("id",id);
+    var separator = $('.custom-iconizer:last').after('<img src="https://bitcointalk.org/Themes/custom1/images/bbc/divider.gif" alt="|" style="margin: 0 3px 0 3px;" class="custom-iconizer">');
     if (id != '')
     {
         newSurroundersImage.attr("id",id);
